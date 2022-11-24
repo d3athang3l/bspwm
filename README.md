@@ -5,6 +5,11 @@
 ![GitHub](https://img.shields.io/github/license/Pfeffimann18/bspwm)
 </br>
 
+
+<p align="center">
+  <img src="https://thumbs2.imgbox.com/b4/aa/iKa742Dt_t.png" width="900px">
+</p>
+
 ## Basisinstallation
 
 ## Verzeichnisse erstellen
