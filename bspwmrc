@@ -1,6 +1,5 @@
 #! /bin/sh
 ~/.config/polybar/launch.sh &
-~/.config/polybar/launch.sh &
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor -d sys term www dev txt vid flt spot virt
