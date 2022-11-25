@@ -8,7 +8,11 @@
 
 
 <p align="center">
-  <img src="https://thumbs2.imgbox.com/b4/aa/iKa742Dt_t.png" width="900px">
+  <img src="https://thumbs2.imgbox.com/06/86/kJbzbfji_t.png" width="900px">
+</p>
+
+<p align="center">
+  <img src="https://thumbs2.imgbox.com/45/c9/FzDWwV73_t.png" width="900px">
 </p>
 
 ## Installation der erforderlichen Pakete
@@ -28,14 +32,10 @@ mkdir ~/.config/ranger/colorschemes
 
 ## Konfigurationsdateien kopieren
 ```bash
-cp alacritty.yml ~/.config
-cp default.py ~/.config/ranger/colorschemes
 cp display.sh ~/.screenlayout
 cp config.ini ~/.config/polybar
-cp picom.conf ~/.config
 cp .xinitrc ~
 cp bspwmrc ~/.config/bspwm
 cp sxhdkrc ~/.config/sxhdk
-cp -r rofi ~/.config/
-
 ```
+Kopieren Sie außerdem [ZSH](https://github.com/Pfeffimann18/ZSH), [Alacritty](https://github.com/Pfeffimann18/ArchBasicSetup/blob/main/alacritty.yml), [Rofi](https://github.com/Pfeffimann18/ArchBasicSetup/tree/main/rofi) und [Picom](https://github.com/Pfeffimann18/ArchBasicSetup/blob/main/picom.conf).
