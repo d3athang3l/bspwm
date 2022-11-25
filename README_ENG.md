@@ -22,15 +22,19 @@ mkdir ~/.screenlayout
 mkdir ~/.config/bspwm
 mkdir ~/.config/sxhdk
 mkdir ~/.config/polybar
+mkdir ~/.config/ranger/
+mkdir ~/.config/ranger/colorschemes
 ```
 
 ## copy the config-files
 ```bash
+cp alacritty.yml ~/.config
+cp default.py ~/.config/ranger/colorschemes
 cp display.sh ~/.screenlayout
 cp config.ini ~/.config/polybar
 cp picom.conf ~/.config
+cp .xinitrc ~
 cp bspwmrc ~/.config/bspwm
 cp sxhdkrc ~/.config/sxhdk
-cp .xinitrc ~
+cp -r rofi ~/.config/
 ```
-
