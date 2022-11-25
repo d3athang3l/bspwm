@@ -3,20 +3,24 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Pfeffimann18/bspwm)
 ![GitHub repo file count](https://img.shields.io/github/directory-file-count/Pfeffimann18/bspwm)
 ![GitHub](https://img.shields.io/github/license/Pfeffimann18/bspwm)
-
+[README (English)](https://github.com/Pfeffimann18/bspwm/blob/main/README_ENG.md)
 </br>
 
 
 <p align="center">
-  <img src="https://thumbs2.imgbox.com/b4/aa/iKa742Dt_t.png" width="900px">
+  <img src="https://thumbs2.imgbox.com/06/86/kJbzbfji_t.png" width="900px">
 </p>
 
-## Installation of the needed packages
+<p align="center">
+  <img src="https://thumbs2.imgbox.com/45/c9/FzDWwV73_t.png" width="900px">
+</p>
+
+## Installing the required packages
 ```bash
 yay -S xf86-video-amd xorg xorg-xinit bspwm sxhkd nitrogen rofi picom alacritty firefox arandr ranger bashtop
 ```
 
-## creating directorys
+## Create directories
 ```bash
 mkdir ~/.screenlayout
 mkdir ~/.config/bspwm
@@ -26,15 +30,12 @@ mkdir ~/.config/ranger/
 mkdir ~/.config/ranger/colorschemes
 ```
 
-## copy the config-files
+## Copy configuration files
 ```bash
-cp alacritty.yml ~/.config
-cp default.py ~/.config/ranger/colorschemes
 cp display.sh ~/.screenlayout
 cp config.ini ~/.config/polybar
-cp picom.conf ~/.config
 cp .xinitrc ~
 cp bspwmrc ~/.config/bspwm
 cp sxhdkrc ~/.config/sxhdk
-cp -r rofi ~/.config/
 ```
+Also copy [ZSH](https://github.com/Pfeffimann18/ZSH), [Alacritty](https://github.com/Pfeffimann18/ArchBasicSetup/blob/main/alacritty.yml), [Rofi](https://github.com/Pfeffimann18/ArchBasicSetup/tree/main/rofi), and [Picom](https://github.com/Pfeffimann18/ArchBasicSetup/blob/main/picom.conf).

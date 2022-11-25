@@ -2,7 +2,7 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Pfeffimann18/bspwm)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Pfeffimann18/bspwm)
 ![GitHub repo file count](https://img.shields.io/github/directory-file-count/Pfeffimann18/bspwm)
-![GitHub](https://img.shields.io/github/license/Pfeffimann18/bspwm)
+![GitHub](https://img.shields.io/github/license/Pfeffimann18/bspwm) </br>
 [README (English)](https://github.com/Pfeffimann18/bspwm/blob/main/README_ENG.md)
 </br>
 
