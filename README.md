@@ -3,6 +3,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Pfeffimann18/bspwm)
 ![GitHub repo file count](https://img.shields.io/github/directory-file-count/Pfeffimann18/bspwm)
 ![GitHub](https://img.shields.io/github/license/Pfeffimann18/bspwm)
+
 </br>
 
 
@@ -10,7 +11,10 @@
   <img src="https://thumbs2.imgbox.com/b4/aa/iKa742Dt_t.png" width="900px">
 </p>
 
-## Basisinstallation
+## Installation der erforderlichen Pakete
+```bash
+yay -S xf86-video-amd xorg xorg-xinit bspwm sxhkd nitrogen rofi picom alacritty firefox arandr ranger bashtop
+```
 
 ## Verzeichnisse erstellen
 ```bash
@@ -30,7 +34,3 @@ cp sxhdkrc ~/.config/sxhdk
 cp .xinitrc ~
 ```
 
-## Installation der erforderlichen Pakete
-```bash
-paru -S xf86-video-amd xorg xorg-xinit bspwm sxhkd nitrogen rofi picom alacritty firefox arandr ranger bashtop
-```
