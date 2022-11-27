@@ -6,7 +6,6 @@
 [README (English)](https://github.com/Pfeffimann18/bspwm/blob/main/README_ENG.md)
 </br>
 
-
 <p align="center">
   <img src="https://thumbs2.imgbox.com/06/86/kJbzbfji_t.png" width="900px">
 </p>
@@ -14,11 +13,14 @@
 <p align="center">
   <img src="https://thumbs2.imgbox.com/45/c9/FzDWwV73_t.png" width="900px">
 </p>
+</br>
 
 ## Installation der erforderlichen Pakete
 ```bash
 yay -S xf86-video-amd xorg xorg-xinit bspwm sxhkd nitrogen rofi picom alacritty firefox arandr ranger bashtop
 ```
+> Kopieren Sie außerdem [ZSH](https://github.com/Pfeffimann18/ZSH), [Alacritty](https://github.com/Pfeffimann18/ArchBasicSetup/blob/main/alacritty.yml), [Rofi](https://github.com/Pfeffimann18/ArchBasicSetup/tree/main/rofi) und [Picom](https://github.com/Pfeffimann18/ArchBasicSetup/blob/main/picom.conf). 
+</br>
 
 ## Verzeichnisse erstellen
 ```bash
@@ -29,6 +31,7 @@ mkdir ~/.config/polybar
 mkdir ~/.config/ranger/
 mkdir ~/.config/ranger/colorschemes
 ```
+</br>
 
 ## Konfigurationsdateien kopieren
 ```bash
@@ -38,4 +41,3 @@ cp .xinitrc ~
 cp bspwmrc ~/.config/bspwm
 cp sxhdkrc ~/.config/sxhdk
 ```
-Kopieren Sie außerdem [ZSH](https://github.com/Pfeffimann18/ZSH), [Alacritty](https://github.com/Pfeffimann18/ArchBasicSetup/blob/main/alacritty.yml), [Rofi](https://github.com/Pfeffimann18/ArchBasicSetup/tree/main/rofi) und [Picom](https://github.com/Pfeffimann18/ArchBasicSetup/blob/main/picom.conf).
