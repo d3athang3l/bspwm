@@ -39,5 +39,5 @@ cp display.sh ~/.screenlayout
 cp config.ini ~/.config/polybar
 cp .xinitrc ~
 cp bspwmrc ~/.config/bspwm
-cp sxhdkrc ~/.config/sxhdk
+cp sxhkdrc ~/.config/sxhkd
 ```
