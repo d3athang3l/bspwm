@@ -22,6 +22,20 @@ yay -S xf86-video-amdgpu xorg xorg-xinit bspwm sxhkd nitrogen rofi picom alacrit
 > Kopieren Sie außerdem [ZSH](https://github.com/Pfeffimann18/ZSH), [Alacritty](https://github.com/Pfeffimann18/ArchBasicSetup/blob/main/alacritty.yml), [Rofi](https://github.com/Pfeffimann18/ArchBasicSetup/tree/main/rofi) und [Picom](https://github.com/Pfeffimann18/ArchBasicSetup/blob/main/picom.conf). 
 </br>
 
+mkdir ~/.config/bspwm
+mkdir ~/.config/sxhdk
+cp bspwmrc ~/.config/bspwm
+cp sxhkdrc ~/.config/sxhkd
+
+cp .xinitrc ~
+
+
+
+
+
+
+
+
 ## Verzeichnisse erstellen
 ```bash
 mkdir ~/.screenlayout
@@ -36,8 +50,6 @@ mkdir ~/.config/ranger/colorschemes
 ## Konfigurationsdateien kopieren
 ```bash
 cp display.sh ~/.screenlayout
+chmod +x display.sh
 cp config.ini ~/.config/polybar
-cp .xinitrc ~
-cp bspwmrc ~/.config/bspwm
-cp sxhkdrc ~/.config/sxhkd
 ```
