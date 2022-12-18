@@ -53,3 +53,11 @@ cp display.sh ~/.screenlayout
 chmod +x display.sh
 cp config.ini ~/.config/polybar
 ```
+
+```
+XF86AudioRaiseVolume
+  amixer -D pulse sset Master 5%+ unmute
+
+XF86AudioLowerVolume
+  amixer -D pulse sset Master 5%- unmute
+  ```
