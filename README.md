@@ -2,7 +2,7 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Pfeffimann18/bspwm)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Pfeffimann18/bspwm)
 ![GitHub repo file count](https://img.shields.io/github/directory-file-count/Pfeffimann18/bspwm)
-![GitHub](https://img.shields.io/github/license/Pfeffimann18/bspwm) </br>
+![GitHub](https://img.shields.io/github/license/Pfeffimann18/bspwm); 
 [README (English)](https://github.com/Pfeffimann18/bspwm/blob/main/README_ENG.md)
 </br>
 
@@ -15,41 +15,7 @@
 </p>
 </br>
 
-## Installation der erforderlichen Pakete
-```bash
-yay -S xf86-video-amdgpu xorg xorg-xinit bspwm sxhkd nitrogen rofi picom alacritty firefox arandr ranger bashtop
-```
-> Kopieren Sie außerdem [ZSH](https://github.com/Pfeffimann18/ZSH), [Alacritty](https://github.com/Pfeffimann18/ArchBasicSetup/blob/main/alacritty.yml), [Rofi](https://github.com/Pfeffimann18/ArchBasicSetup/tree/main/rofi) und [Picom](https://github.com/Pfeffimann18/ArchBasicSetup/blob/main/picom.conf). 
-</br>
-
-```bash
-mkdir ~/.config/bspwm
-mkdir ~/.config/sxhdk
-cp bspwmrc ~/.config/bspwm
-cp sxhkdrc ~/.config/sxhkd
-cp .xinitrc ~
-```
-</br>
-
-## Verzeichnisse erstellen
-```bash
-mkdir ~/.screenlayout
-mkdir ~/.config/bspwm
-mkdir ~/.config/sxhdk
-mkdir ~/.config/polybar
-mkdir ~/.config/ranger/
-mkdir ~/.config/ranger/colorschemes
-```
-</br>
-
-## Konfigurationsdateien kopieren
-```bash
-cp display.sh ~/.screenlayout
-chmod +x display.sh
-cp config.ini ~/.config/polybar
-```
-</br>
-
+# Konfiguration
 ## Lautstärketasten anpassen
 ```bash
 # Multimedia keys
@@ -66,17 +32,19 @@ XF86AudioMute
 ```
 </br>
 
-## dmenu-xyw
+## dmenu-flexipatch
 ```bash
 cd /opt
-sudo git clone https://github.com/jakeogh/dmenu-xyw.git
-sudo chown -R leon:wheel dmenu-xyw && cd dmenu-xyw # Catppuccin-Farben in config.def.h übernehmen
-sudo make clean install
+sudo git clone https://github.com/bakkeby/dmenu-flexipatch
+sudo chown -R leon:wheel dmenu-flexipatch && cd dmenu-flexipatch
 ```
+In der `config.def.h` die Catppuccin Farben einfügen und in `patches.h` bei `GRID_PATCH`, `HIGHPRIORITY_PATCH`, `SCROLL_PATCH` und `XYW_PATCH` die 0 zu einer 1 abändern.
+
+Anschließedn mit `sudo make clean install` dmenu installieren.
 ```bash
 # program launcher
-super + @space
-	/opt/dmenu-xyw/dmenu-xyw_run -l 20 -x 0 -y 0 -z 660 -p 'Run: ' "$@"
+super + shift + Return
+	dmenu_path | dmenu_run -l 20 -g 3 -X 0 -Y 0 -W 680 -p 'Run: ' "$@"
 ```
 > In `.sxhkdrc` einfügen
 
