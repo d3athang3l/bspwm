@@ -1,22 +1,24 @@
+# Terminal
 super + Return
 	alacritty
 
+# Finder
 super + e
 	thunar
 
+# Text Editor
 super + g
 	geany
 
+# Browser
 super + f
 	firefox
-	
-super + g
-	geany
 
-# program launcher
+# dmenu
 super + shift + Return
 	dmenu_path | dmenu_run -l 20 -g 3 -X 0 -Y 0 -W 680 -p 'Run: ' "$@"
-	
+
+# dmenu-hub
 super + ctrl + Return
 	~/.config/bspwm/scripts/dm-hub.sh
 	
@@ -29,7 +31,6 @@ super + shift + Tab
 	rofi -modi drun -show window -line-padding 20 \
                 -columns 2 -padding 50 -hide-scrollbar -terminal alacritty \
                 -show-icons -drun-icon-theme "McMojave-circle-red-dark" -font "SF Mono 10"
-
 # close and kill
 super + {_,shift + }q
 	bspc node -{c,k}
