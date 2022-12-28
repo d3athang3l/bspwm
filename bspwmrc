@@ -1,4 +1,5 @@
 #! /bin/sh
+
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor -d sys term www dev txt vid flt spot virt
@@ -9,13 +10,57 @@ bspc config window_gap          12
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+bspc config pointer_follows_focus false
+bspc config focus_follows_pointer false
 
-bspc rule -a Alacritty desktop='^2'
 bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Firefox desktop='^3'
-bspc rule -a Emacs state=tiled
+bspc rule -a Alacritty desktop='^2'
+bspc rule -a firefox desktop='^3'
+# bspc rule -a Geany desktop='^9'
+bspc rule -a Spotify desktop='^8'
+bspc rule -a virt-manager desktop='^9'
 bspc rule -a mplayer2 state=floating
+bspc rule -a Yad state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
 
+# Border
+bspc config focused_border_color        "#ed8796"
+bspc config normal_border_color         "#74C7EC"
+bspc config active_border_color         "#073642"
+
+#
+# Autostart
+#
+# Set display from arandr saved script
+sh ~/.screenlayout/monitor.sh &
+
+# Bar
+killall polybar
+polybar -c ~/.config/polybar/config.ini &
+
+# Notifications
+/usr/bin/dunst &
+
+# Conky
+killall conky
+conky -c ~/.config/conky.conf & 
+
+# Polkit
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# Wallpaper
+nitrogen --restore &
+
+# Dex
+dex -a -s /etc/xdg/autostart/:~/.config/autostart/  &
+
+# Picom
+picom -b &
+
+# Cursor
+xsetroot -cursor_name left_ptr &
+
+# Low battery notifier
+~/.config/bspwm/scripts/low_bat_notifier.sh
