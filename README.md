@@ -1,4 +1,4 @@
-# bspwm
+# <span style="color:#8bd5ca">bspwm</span>
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Pfeffimann18/bspwm)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Pfeffimann18/bspwm)
 ![GitHub repo file count](https://img.shields.io/github/directory-file-count/Pfeffimann18/bspwm)
@@ -15,8 +15,8 @@
 </p>
 </br>
 
-# Konfiguration
-## Lautstärketasten anpassen
+# <span style="color:#8bd5ca">Konfiguration</span>
+## <span style="color:#8bd5ca">Lautstärketasten anpassen</span>
 ```bash
 # Multimedia keys
 XF86AudioRaiseVolume
@@ -32,7 +32,7 @@ XF86AudioMute
 ```
 </br>
 
-## dmenu-flexipatch
+## <span style="color:#8bd5ca">dmenu-flexipatch</span>
 ```bash
 cd /opt
 sudo git clone https://github.com/bakkeby/dmenu-flexipatch
@@ -50,7 +50,7 @@ super + shift + Return
 
 </br>
 
-## Powermenü
+## <span style="color:#8bd5ca">Powermenü</span>
 `sysstate.sh` nach `~/.config/bspwm/scripts/` kopieren.
 ```bash
 # power-menu 
