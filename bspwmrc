@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d sys term www dev txt vid flt spot virt
+bspc monitor -d sys term www dev txt vid flt spot virt gfx
 
 bspc config border_width         2
 bspc config window_gap          12
@@ -12,6 +12,7 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config pointer_follows_focus false
 bspc config focus_follows_pointer false
+bspc config single_monocle true
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Alacritty desktop='^2'
@@ -27,7 +28,7 @@ bspc rule -a Screenkey manage=off
 
 # Border
 bspc config focused_border_color        "#ed8796"
-bspc config normal_border_color         "#74C7EC"
+bspc config normal_border_color         "#8AADF4"
 bspc config active_border_color         "#073642"
 
 #
@@ -37,15 +38,18 @@ bspc config active_border_color         "#073642"
 sh ~/.screenlayout/monitor.sh &
 
 # Bar
-killall polybar
-polybar -c ~/.config/polybar/config.ini &
+killall polybar &
+zsh ~/.config/polybar/launch.sh &
 
 # Notifications
+pkill screen_msg.sh &
+~/.config/scripts/screen_msg.sh &
 /usr/bin/dunst &
 
 # Conky
-killall conky
-conky -c ~/.config/conky.conf & 
+killall -q conky
+while pgrep -u $UID -x conky >/dev/null; do sleep 1; done &
+conky -c ~/.config/conky.conf &
 
 # Polkit
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &

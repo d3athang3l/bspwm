@@ -16,15 +16,15 @@ super + f
 
 # dmenu
 super + shift + Return
-	dmenu_path | dmenu_run -l 20 -g 3 -X 0 -Y 0 -W 680 -p 'Run: ' "$@"
+	dmenu_path | dmenu_run -l 20 -g 4 -X 0 -Y 0 -W 780 -p 'Run: ' "$@"
 
 # dmenu-hub
 super + ctrl + Return
-	~/.config/bspwm/scripts/dm-hub.sh
+	~/.config/scripts/dm-hub.sh
 	
 # power-menu 
 super + shift + e
-     ~/.config/bspwm/scripts/dm-sysstate.sh
+     ~/.config/scripts/dm-sysstate.sh
 	
 # show open window
 super + shift + Tab

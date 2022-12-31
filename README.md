@@ -1,4 +1,4 @@
-# <p style="color:#8bd5ca">bspwm</p>
+# bspwm
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Pfeffimann18/bspwm)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Pfeffimann18/bspwm)
 ![GitHub repo file count](https://img.shields.io/github/directory-file-count/Pfeffimann18/bspwm)
@@ -8,31 +8,41 @@
 
 <p align="center">
   <img src="https://thumbs2.imgbox.com/06/86/kJbzbfji_t.png" width="900px">
-</p>
+
 
 <p align="center">
   <img src="https://thumbs2.imgbox.com/45/c9/FzDWwV73_t.png" width="900px">
-</p>
+
 </br>
 
-# <p style="color:#8bd5ca">Konfiguration</p>
-## <p style="color:#8bd5ca">Lautstärketasten anpassen</p>
 ```bash
-# Multimedia keys
-XF86AudioRaiseVolume
-  amixer -D pulse sset Master 5%+ unmute
+yay -S alacritty thunar firefox
+```
 
-# Still multimedia
-XF86AudioLowerVolume
-  amixer -D pulse sset Master 5%- unmute
+# Features
+- Polybar mit Icons oder Namen; [spotify modul](https://github.com/PrayagS/polybar-spotify)
+- dmenu-prompt zum starten von Programmen
+- dm-hub für Einstellungen
+- `screen_msg.sh` für Benachrichtigung zum Desktopwechsel
 
-# still
-XF86AudioMute
-  amixer -D pulse sset Master toggle-mute
+</br>
+
+# Konfiguration </br>
+## Skripte
+Als erstes sollten sie ein Verzeichniss für die Skripte erstellen und sie dann kopieren.
+
+## Polybar
+`~/.config/polybar/launch.sh`
+```
+#!/usr/bin/zsh
+killall -q polybar
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+MONITOR=HDMI-0 polybar mybar &
+MONITOR=DVI-0 polybar secondary &
 ```
 </br>
 
-## <p style="color:#8bd5ca">dmenu-flexipatch</p>
+## dmenu-flexipatch
 ```bash
 cd /opt
 sudo git clone https://github.com/bakkeby/dmenu-flexipatch
@@ -50,11 +60,31 @@ super + shift + Return
 
 </br>
 
-## <p style="color:#8bd5ca">Powermenü</p>
-`sysstate.sh` nach `~/.config/bspwm/scripts/` kopieren.
+
+## Lautstärketasten anpassen
+```bash
+# Multimedia keys
+XF86AudioRaiseVolume
+  amixer -D pulse sset Master 5%+ unmute
+
+# Still multimedia
+XF86AudioLowerVolume
+  amixer -D pulse sset Master 5%- unmute
+
+# still
+XF86AudioMute
+  amixer -D pulse sset Master toggle-mute
+```
+</br>
+
+## Powermenü
+`dm-sysstate.sh` nach `~/.config/scripts/` kopieren.
 ```bash
 # power-menu 
 super + shift + e
      ~/.config/bspwm/scripts/sysstate.sh
 ```
 > In `.sxhkdrc` einfügen
+
+## Polybar - Spotify
+> [https://github.com/PrayagS/polybar-spotify](https://github.com/PrayagS/polybar-spotify)
