@@ -9,3 +9,6 @@ ln -s ~/GitHub//bspwm/sxhkd/sxhkdrc ~/.config/sxhkd/sxhkdrc
 # Polybar
 rm -r ~/.config/polybar
 ln -s ~/GitHub/bspwm/polybar ~/.config/polybar
+
+# Dmenu
+ln -s ~/GitHub/bspwm/scripts/dmenu/ ~/.config/scripts/
