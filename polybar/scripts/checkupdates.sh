@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 updates=$(checkupdates)
 
 if [ -z "$updates" ]
@@ -11,4 +10,3 @@ else
 fi
 
 echo "%{T1}%{T-} %{T2}$count%{T-}"
-
