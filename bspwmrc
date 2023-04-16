@@ -43,7 +43,7 @@ sh ~/.screenlayout/monitor.sh &
 
 # Bar
 killall polybar &
-zsh ~/.config/polybar/launch.sh &
+fish ~/.config/polybar/launch.sh &
 
 # Notifications
 /usr/bin/dunst &
